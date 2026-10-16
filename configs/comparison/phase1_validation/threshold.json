@@ -1,0 +1,11 @@
+{
+  "rule": "benign p99 from independent clean runs",
+  "samples": 30,
+  "mean": -0.09642708363533019,
+  "stdev": 0.16766739506084877,
+  "min": -0.48280300242106117,
+  "max": 0.22084056542714436,
+  "p99": 0.22084056542714436,
+  "runs": 6,
+  "rounds_per_run": 5
+}

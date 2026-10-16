@@ -1,0 +1,67 @@
+{
+  "stage": "first_round_aggregation_screening",
+  "rounds": 5,
+  "threshold": 0.01297447627385459,
+  "noise_scale": 0.005,
+  "common": [
+    "-nd", "10",
+    "-ha", "*,*,*",
+    "-aio", "1",
+    "-pow", "0",
+    "-ko", "6",
+    "-cs", "0",
+    "-B", "128",
+    "-mn", "ddpm",
+    "-iid", "0",
+    "-lr", "0.001",
+    "-dtx", "1",
+    "-le", "1",
+    "-v", "0",
+    "--validation_seed", "9001",
+    "--test_batchsize", "256",
+    "--save_global_checkpoints", "1",
+    "--checkpoint_frequency", "1"
+  ],
+  "runs": [
+    {
+      "id": "r1-clean-hard-61000",
+      "tag": "r1_clean_hard",
+      "args": ["-max_ncomm", "5", "-nm", "0", "-vh", "0.01297447627385459", "--seed", "61000", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "hard_filter"]
+    },
+    {
+      "id": "r1-clean-trust-61000",
+      "tag": "r1_clean_trust",
+      "args": ["-max_ncomm", "5", "-nm", "0", "-vh", "0.01297447627385459", "--seed", "61000", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "trust_weighted", "--trust_center", "0.00016371802330954964", "--trust_scale", "0.005933583867778754", "--trust_soft_threshold", "1.0", "--trust_beta", "1.0", "--trust_min_weight", "0.05"]
+    },
+    {
+      "id": "r1-clean-hard-61001",
+      "tag": "r1_clean_hard",
+      "args": ["-max_ncomm", "5", "-nm", "0", "-vh", "0.01297447627385459", "--seed", "61001", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "hard_filter"]
+    },
+    {
+      "id": "r1-clean-trust-61001",
+      "tag": "r1_clean_trust",
+      "args": ["-max_ncomm", "5", "-nm", "0", "-vh", "0.01297447627385459", "--seed", "61001", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "trust_weighted", "--trust_center", "0.00016371802330954964", "--trust_scale", "0.005933583867778754", "--trust_soft_threshold", "1.0", "--trust_beta", "1.0", "--trust_min_weight", "0.05"]
+    },
+    {
+      "id": "r1-attack-hard-62000",
+      "tag": "r1_attack_hard",
+      "args": ["-max_ncomm", "5", "-nm", "1", "-nv", "0.005", "-vh", "0.01297447627385459", "--seed", "62000", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "hard_filter"]
+    },
+    {
+      "id": "r1-attack-trust-62000",
+      "tag": "r1_attack_trust",
+      "args": ["-max_ncomm", "5", "-nm", "1", "-nv", "0.005", "-vh", "0.01297447627385459", "--seed", "62000", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "trust_weighted", "--trust_center", "0.00016371802330954964", "--trust_scale", "0.005933583867778754", "--trust_soft_threshold", "1.0", "--trust_beta", "1.0", "--trust_min_weight", "0.05"]
+    },
+    {
+      "id": "r1-attack-hard-62001",
+      "tag": "r1_attack_hard",
+      "args": ["-max_ncomm", "5", "-nm", "1", "-nv", "0.005", "-vh", "0.01297447627385459", "--seed", "62001", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "hard_filter"]
+    },
+    {
+      "id": "r1-attack-trust-62001",
+      "tag": "r1_attack_trust",
+      "args": ["-max_ncomm", "5", "-nm", "1", "-nv", "0.005", "-vh", "0.01297447627385459", "--seed", "62001", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "trust_weighted", "--trust_center", "0.00016371802330954964", "--trust_scale", "0.005933583867778754", "--trust_soft_threshold", "1.0", "--trust_beta", "1.0", "--trust_min_weight", "0.05"]
+    }
+  ]
+}

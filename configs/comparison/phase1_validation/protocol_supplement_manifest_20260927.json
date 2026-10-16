@@ -1,0 +1,572 @@
+{
+  "manifest_version": "protocol-supplement-20260927-v1",
+  "status": "approved_for_execution_after_wsl_and_remote_smoke",
+  "purpose": "Blockchain signature integrity, block tamper resistance and replay resistance supplement",
+  "backend": "remote_rtx4080_super",
+  "rounds": 100,
+  "seeds_per_configuration": 3,
+  "expected_runs": 27,
+  "frozen_parameters": {
+    "threshold": 0.08772326443990075,
+    "noise_scale": 0.02,
+    "trust_center": 0.00016371802330954964,
+    "trust_scale": 0.005933583867778754,
+    "validation_seed": 9001,
+    "check_signature": 1,
+    "destroy_tx_in_block": 0
+  },
+  "common": [
+    "-nd",
+    "10",
+    "-ha",
+    "*,*,*",
+    "-aio",
+    "1",
+    "-pow",
+    "0",
+    "-ko",
+    "6",
+    "-cs",
+    "1",
+    "-B",
+    "128",
+    "-mn",
+    "ddpm",
+    "-iid",
+    "0",
+    "-lr",
+    "0.001",
+    "-dtx",
+    "0",
+    "-le",
+    "1",
+    "-v",
+    "0",
+    "-nv",
+    "0.02",
+    "--validation_seed",
+    "9001",
+    "--test_batchsize",
+    "256",
+    "--save_global_checkpoints",
+    "1",
+    "--checkpoint_frequency",
+    "1",
+    "--aggregation_method",
+    "trust_weighted",
+    "--trust_center",
+    "0.00016371802330954964",
+    "--trust_scale",
+    "0.005933583867778754",
+    "--trust_soft_threshold",
+    "1.0",
+    "--trust_beta",
+    "1.0",
+    "--trust_min_weight",
+    "0.05",
+    "--trust_hard_reject_score",
+    "5.0",
+    "-max_ncomm",
+    "100",
+    "-vh",
+    "0.08772326443990075"
+  ],
+  "groups": {
+    "H0": 12,
+    "H1": 6,
+    "H2": 3,
+    "H3": 6
+  },
+  "runs": [
+    {
+      "id": "h0-clean-bc-101000",
+      "tag": "h0-clean_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101000,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101000",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "none"
+      ]
+    },
+    {
+      "id": "h0-clean-bc-101001",
+      "tag": "h0-clean_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101001,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101001",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "none"
+      ]
+    },
+    {
+      "id": "h0-clean-bc-101002",
+      "tag": "h0-clean_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101002,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101002",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "none"
+      ]
+    },
+    {
+      "id": "h0-clean-nobc-101000",
+      "tag": "h0-clean_nobc",
+      "method": "NOBC-MFAIGC",
+      "seed": 101010,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101010",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "none"
+      ]
+    },
+    {
+      "id": "h0-clean-nobc-101001",
+      "tag": "h0-clean_nobc",
+      "method": "NOBC-MFAIGC",
+      "seed": 101011,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101011",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "none"
+      ]
+    },
+    {
+      "id": "h0-clean-nobc-101002",
+      "tag": "h0-clean_nobc",
+      "method": "NOBC-MFAIGC",
+      "seed": 101012,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101012",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "none"
+      ]
+    },
+    {
+      "id": "h0-attack30-bc-101000",
+      "tag": "h0-attack30_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101020,
+      "args": [
+        "-nm",
+        "3",
+        "--seed",
+        "101020",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "none"
+      ]
+    },
+    {
+      "id": "h0-attack30-bc-101001",
+      "tag": "h0-attack30_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101021,
+      "args": [
+        "-nm",
+        "3",
+        "--seed",
+        "101021",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "none"
+      ]
+    },
+    {
+      "id": "h0-attack30-bc-101002",
+      "tag": "h0-attack30_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101022,
+      "args": [
+        "-nm",
+        "3",
+        "--seed",
+        "101022",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "none"
+      ]
+    },
+    {
+      "id": "h0-attack30-nobc-101000",
+      "tag": "h0-attack30_nobc",
+      "method": "NOBC-MFAIGC",
+      "seed": 101030,
+      "args": [
+        "-nm",
+        "3",
+        "--seed",
+        "101030",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "none"
+      ]
+    },
+    {
+      "id": "h0-attack30-nobc-101001",
+      "tag": "h0-attack30_nobc",
+      "method": "NOBC-MFAIGC",
+      "seed": 101031,
+      "args": [
+        "-nm",
+        "3",
+        "--seed",
+        "101031",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "none"
+      ]
+    },
+    {
+      "id": "h0-attack30-nobc-101002",
+      "tag": "h0-attack30_nobc",
+      "method": "NOBC-MFAIGC",
+      "seed": 101032,
+      "args": [
+        "-nm",
+        "3",
+        "--seed",
+        "101032",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "none"
+      ]
+    },
+    {
+      "id": "h1-validator-tamper-bc-101000",
+      "tag": "h1-validator-tamper_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101040,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101040",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "validator_tamper"
+      ]
+    },
+    {
+      "id": "h1-validator-tamper-bc-101001",
+      "tag": "h1-validator-tamper_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101041,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101041",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "validator_tamper"
+      ]
+    },
+    {
+      "id": "h1-validator-tamper-bc-101002",
+      "tag": "h1-validator-tamper_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101042,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101042",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "validator_tamper"
+      ]
+    },
+    {
+      "id": "h1-validator-tamper-nobc-101000",
+      "tag": "h1-validator-tamper_nobc",
+      "method": "NOBC-MFAIGC",
+      "seed": 101050,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101050",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "validator_tamper"
+      ]
+    },
+    {
+      "id": "h1-validator-tamper-nobc-101001",
+      "tag": "h1-validator-tamper_nobc",
+      "method": "NOBC-MFAIGC",
+      "seed": 101051,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101051",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "validator_tamper"
+      ]
+    },
+    {
+      "id": "h1-validator-tamper-nobc-101002",
+      "tag": "h1-validator-tamper_nobc",
+      "method": "NOBC-MFAIGC",
+      "seed": 101052,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101052",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "validator_tamper"
+      ]
+    },
+    {
+      "id": "h2-block-tamper-bc-101000",
+      "tag": "h2-block-tamper_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101060,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101060",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "block_tamper"
+      ]
+    },
+    {
+      "id": "h2-block-tamper-bc-101001",
+      "tag": "h2-block-tamper_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101061,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101061",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "block_tamper"
+      ]
+    },
+    {
+      "id": "h2-block-tamper-bc-101002",
+      "tag": "h2-block-tamper_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101062,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101062",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "block_tamper"
+      ]
+    },
+    {
+      "id": "h3-replay-bc-101000",
+      "tag": "h3-replay_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101070,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101070",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "replay"
+      ]
+    },
+    {
+      "id": "h3-replay-bc-101001",
+      "tag": "h3-replay_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101071,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101071",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "replay"
+      ]
+    },
+    {
+      "id": "h3-replay-bc-101002",
+      "tag": "h3-replay_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101072,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101072",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "replay"
+      ]
+    },
+    {
+      "id": "h3-replay-nobc-101000",
+      "tag": "h3-replay_nobc",
+      "method": "NOBC-MFAIGC",
+      "seed": 101080,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101080",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "replay"
+      ]
+    },
+    {
+      "id": "h3-replay-nobc-101001",
+      "tag": "h3-replay_nobc",
+      "method": "NOBC-MFAIGC",
+      "seed": 101081,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101081",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "replay"
+      ]
+    },
+    {
+      "id": "h3-replay-nobc-101002",
+      "tag": "h3-replay_nobc",
+      "method": "NOBC-MFAIGC",
+      "seed": 101082,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101082",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "replay"
+      ]
+    }
+  ],
+  "excluded_from_paper_statistics": [
+    "WSL smoke runs",
+    "remote smoke run"
+  ]
+}

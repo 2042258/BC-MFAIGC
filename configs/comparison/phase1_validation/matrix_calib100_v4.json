@@ -1,0 +1,231 @@
+{
+  "stage": "calibration",
+  "rounds": 100,
+  "threshold": 0.2,
+  "noise_scales": [
+    0.005,
+    0.01,
+    0.015,
+    0.02,
+    0.03
+  ],
+  "noise_scale": 0.02,
+  "common": [
+    "-nd",
+    "10",
+    "-ha",
+    "*,*,*",
+    "-aio",
+    "1",
+    "-pow",
+    "0",
+    "-ko",
+    "6",
+    "-cs",
+    "0",
+    "-B",
+    "128",
+    "-mn",
+    "ddpm",
+    "-iid",
+    "0",
+    "-lr",
+    "0.001",
+    "-dtx",
+    "1",
+    "-le",
+    "1",
+    "-v",
+    "0",
+    "--validation_seed",
+    "9001",
+    "--test_batchsize",
+    "256",
+    "--save_global_checkpoints",
+    "1",
+    "--checkpoint_frequency",
+    "20"
+  ],
+  "runs": [
+    {
+      "id": "calib-20300",
+      "tag": "calibration",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "0",
+        "-vh",
+        "999",
+        "--seed",
+        "20300",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "calib-20301",
+      "tag": "calibration",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "0",
+        "-vh",
+        "999",
+        "--seed",
+        "20301",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "calib-20302",
+      "tag": "calibration",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "0",
+        "-vh",
+        "999",
+        "--seed",
+        "20302",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "calib-20303",
+      "tag": "calibration",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "0",
+        "-vh",
+        "999",
+        "--seed",
+        "20303",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "calib-20304",
+      "tag": "calibration",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "0",
+        "-vh",
+        "999",
+        "--seed",
+        "20304",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "calib-20305",
+      "tag": "calibration",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "0",
+        "-vh",
+        "999",
+        "--seed",
+        "20305",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "calib-20306",
+      "tag": "calibration",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "0",
+        "-vh",
+        "999",
+        "--seed",
+        "20306",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "calib-20307",
+      "tag": "calibration",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "0",
+        "-vh",
+        "999",
+        "--seed",
+        "20307",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "calib-20308",
+      "tag": "calibration",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "0",
+        "-vh",
+        "999",
+        "--seed",
+        "20308",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "calib-20309",
+      "tag": "calibration",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "0",
+        "-vh",
+        "999",
+        "--seed",
+        "20309",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    }
+  ]
+}

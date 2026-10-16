@@ -1,0 +1,351 @@
+{
+  "stage": "sweep",
+  "rounds": 100,
+  "threshold": 0.01297447627385459,
+  "noise_scales": [
+    0.0025,
+    0.005,
+    0.01,
+    0.02,
+    0.05
+  ],
+  "noise_scale": 0.02,
+  "common": [
+    "-nd",
+    "10",
+    "-ha",
+    "*,*,*",
+    "-aio",
+    "1",
+    "-pow",
+    "0",
+    "-ko",
+    "6",
+    "-cs",
+    "0",
+    "-B",
+    "128",
+    "-mn",
+    "ddpm",
+    "-iid",
+    "0",
+    "-lr",
+    "0.001",
+    "-dtx",
+    "1",
+    "-le",
+    "1",
+    "-v",
+    "0",
+    "--validation_seed",
+    "9001",
+    "--test_batchsize",
+    "256",
+    "--save_global_checkpoints",
+    "1",
+    "--checkpoint_frequency",
+    "20"
+  ],
+  "runs": [
+    {
+      "id": "sweep-s0.0025-21000",
+      "tag": "sweep_sigma_0.0025",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "1",
+        "-nv",
+        "0.0025",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "21000",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "sweep-s0.0025-21001",
+      "tag": "sweep_sigma_0.0025",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "1",
+        "-nv",
+        "0.0025",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "21001",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "sweep-s0.0025-21002",
+      "tag": "sweep_sigma_0.0025",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "1",
+        "-nv",
+        "0.0025",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "21002",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "sweep-s0.005-21000",
+      "tag": "sweep_sigma_0.005",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "1",
+        "-nv",
+        "0.005",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "21000",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "sweep-s0.005-21001",
+      "tag": "sweep_sigma_0.005",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "1",
+        "-nv",
+        "0.005",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "21001",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "sweep-s0.005-21002",
+      "tag": "sweep_sigma_0.005",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "1",
+        "-nv",
+        "0.005",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "21002",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "sweep-s0.01-21000",
+      "tag": "sweep_sigma_0.01",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "1",
+        "-nv",
+        "0.01",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "21000",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "sweep-s0.01-21001",
+      "tag": "sweep_sigma_0.01",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "1",
+        "-nv",
+        "0.01",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "21001",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "sweep-s0.01-21002",
+      "tag": "sweep_sigma_0.01",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "1",
+        "-nv",
+        "0.01",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "21002",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "sweep-s0.02-21000",
+      "tag": "sweep_sigma_0.02",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "1",
+        "-nv",
+        "0.02",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "21000",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "sweep-s0.02-21001",
+      "tag": "sweep_sigma_0.02",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "1",
+        "-nv",
+        "0.02",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "21001",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "sweep-s0.02-21002",
+      "tag": "sweep_sigma_0.02",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "1",
+        "-nv",
+        "0.02",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "21002",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "sweep-s0.05-21000",
+      "tag": "sweep_sigma_0.05",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "1",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "21000",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "sweep-s0.05-21001",
+      "tag": "sweep_sigma_0.05",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "1",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "21001",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "sweep-s0.05-21002",
+      "tag": "sweep_sigma_0.05",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "1",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "21002",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    }
+  ]
+}

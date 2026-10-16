@@ -1,0 +1,30 @@
+# Generated runtime data and private state
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+data/
+# Keep the shared data-loading source package tracked.
+!bcmfaigc/data/
+!bcmfaigc/data/**
+datasets/
+logs/
+results/
+outputs/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.pem
+*.key
+.idea/
+.vscode/
+
+# Python packaging and developer caches
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/

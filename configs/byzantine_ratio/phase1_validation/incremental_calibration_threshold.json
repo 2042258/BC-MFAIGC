@@ -1,0 +1,24 @@
+{
+  "rule": "benign p99 from clean calibration runs",
+  "runs": [
+    "inc-calib-47000",
+    "inc-calib-47001",
+    "inc-calib-47002",
+    "inc-calib-47003",
+    "inc-calib-47004",
+    "inc-calib-47005",
+    "inc-calib-47006",
+    "inc-calib-47007",
+    "inc-calib-47008",
+    "inc-calib-47009"
+  ],
+  "samples": 10000,
+  "mean": 8.6697944854101e-05,
+  "stdev": 0.004871576562720031,
+  "min": -0.07079456100463866,
+  "max": 0.12956461118062335,
+  "p90": 0.0037799049377441607,
+  "p95": 0.005903070449829184,
+  "p99": 0.013486012299855549,
+  "threshold": 0.013486012299855549
+}

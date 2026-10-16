@@ -1,0 +1,132 @@
+{
+  "stage": "incremental_v1",
+  "description": "New-code incremental validation: Multi-Krum, sign-flip attack, and H1/H2 protocol rejection.",
+  "threshold": 0.01297447627385459,
+  "noise_scale": 0.05,
+  "common": [
+    "-nd", "10",
+    "-ha", "5,2,3",
+    "-aio", "1",
+    "-pow", "0",
+    "-ko", "6",
+    "-cs", "1",
+    "-B", "128",
+    "-mn", "ddpm",
+    "-iid", "0",
+    "-lr", "0.001",
+    "-dtx", "1",
+    "-le", "1",
+    "-v", "0",
+    "--validation_seed", "9001",
+    "--test_batchsize", "256",
+    "--save_global_checkpoints", "1",
+    "--checkpoint_frequency", "20"
+  ],
+  "runs": [
+    {
+      "id": "inc-multikrum-clean-41000",
+      "tag": "inc_multikrum_clean",
+      "args": ["-max_ncomm", "100", "-nm", "0", "-nv", "0", "-vh", "0.01297447627385459", "--seed", "41000", "--blockchain_on", "0", "--defense_on", "0", "--aggregation_method", "multikrum", "--multikrum_f", "1"]
+    },
+    {
+      "id": "inc-multikrum-clean-41001",
+      "tag": "inc_multikrum_clean",
+      "args": ["-max_ncomm", "100", "-nm", "0", "-nv", "0", "-vh", "0.01297447627385459", "--seed", "41001", "--blockchain_on", "0", "--defense_on", "0", "--aggregation_method", "multikrum", "--multikrum_f", "1"]
+    },
+    {
+      "id": "inc-multikrum-clean-41002",
+      "tag": "inc_multikrum_clean",
+      "args": ["-max_ncomm", "100", "-nm", "0", "-nv", "0", "-vh", "0.01297447627385459", "--seed", "41002", "--blockchain_on", "0", "--defense_on", "0", "--aggregation_method", "multikrum", "--multikrum_f", "1"]
+    },
+    {
+      "id": "inc-multikrum-near-41000",
+      "tag": "inc_multikrum_near",
+      "args": ["-max_ncomm", "100", "-nm", "3", "-nv", "0.005", "-vh", "0.01297447627385459", "--seed", "41000", "--blockchain_on", "0", "--defense_on", "0", "--aggregation_method", "multikrum", "--multikrum_f", "1"]
+    },
+    {
+      "id": "inc-multikrum-near-41001",
+      "tag": "inc_multikrum_near",
+      "args": ["-max_ncomm", "100", "-nm", "3", "-nv", "0.005", "-vh", "0.01297447627385459", "--seed", "41001", "--blockchain_on", "0", "--defense_on", "0", "--aggregation_method", "multikrum", "--multikrum_f", "1"]
+    },
+    {
+      "id": "inc-multikrum-near-41002",
+      "tag": "inc_multikrum_near",
+      "args": ["-max_ncomm", "100", "-nm", "3", "-nv", "0.005", "-vh", "0.01297447627385459", "--seed", "41002", "--blockchain_on", "0", "--defense_on", "0", "--aggregation_method", "multikrum", "--multikrum_f", "1"]
+    },
+    {
+      "id": "inc-multikrum-strong-41000",
+      "tag": "inc_multikrum_strong",
+      "args": ["-max_ncomm", "100", "-nm", "3", "-nv", "0.05", "-vh", "0.01297447627385459", "--seed", "41000", "--blockchain_on", "0", "--defense_on", "0", "--aggregation_method", "multikrum", "--multikrum_f", "1"]
+    },
+    {
+      "id": "inc-multikrum-strong-41001",
+      "tag": "inc_multikrum_strong",
+      "args": ["-max_ncomm", "100", "-nm", "3", "-nv", "0.05", "-vh", "0.01297447627385459", "--seed", "41001", "--blockchain_on", "0", "--defense_on", "0", "--aggregation_method", "multikrum", "--multikrum_f", "1"]
+    },
+    {
+      "id": "inc-multikrum-strong-41002",
+      "tag": "inc_multikrum_strong",
+      "args": ["-max_ncomm", "100", "-nm", "3", "-nv", "0.05", "-vh", "0.01297447627385459", "--seed", "41002", "--blockchain_on", "0", "--defense_on", "0", "--aggregation_method", "multikrum", "--multikrum_f", "1"]
+    },
+    {
+      "id": "inc-signflip-bc1_def1-42000",
+      "tag": "inc_signflip_bc1_def1",
+      "args": ["-max_ncomm", "100", "-nm", "3", "-nv", "0.05", "-vh", "0.01297447627385459", "--seed", "42000", "--attack_type", "sign_flip", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "hard_filter"]
+    },
+    {
+      "id": "inc-signflip-bc1_def1-42001",
+      "tag": "inc_signflip_bc1_def1",
+      "args": ["-max_ncomm", "100", "-nm", "3", "-nv", "0.05", "-vh", "0.01297447627385459", "--seed", "42001", "--attack_type", "sign_flip", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "hard_filter"]
+    },
+    {
+      "id": "inc-signflip-bc1_def1-42002",
+      "tag": "inc_signflip_bc1_def1",
+      "args": ["-max_ncomm", "100", "-nm", "3", "-nv", "0.05", "-vh", "0.01297447627385459", "--seed", "42002", "--attack_type", "sign_flip", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "hard_filter"]
+    },
+    {
+      "id": "inc-signflip-bc0_def1-42000",
+      "tag": "inc_signflip_bc0_def1",
+      "args": ["-max_ncomm", "100", "-nm", "3", "-nv", "0.05", "-vh", "0.01297447627385459", "--seed", "42000", "--attack_type", "sign_flip", "--blockchain_on", "0", "--defense_on", "1", "--aggregation_method", "hard_filter"]
+    },
+    {
+      "id": "inc-signflip-bc0_def1-42001",
+      "tag": "inc_signflip_bc0_def1",
+      "args": ["-max_ncomm", "100", "-nm", "3", "-nv", "0.05", "-vh", "0.01297447627385459", "--seed", "42001", "--attack_type", "sign_flip", "--blockchain_on", "0", "--defense_on", "1", "--aggregation_method", "hard_filter"]
+    },
+    {
+      "id": "inc-signflip-bc0_def1-42002",
+      "tag": "inc_signflip_bc0_def1",
+      "args": ["-max_ncomm", "100", "-nm", "3", "-nv", "0.05", "-vh", "0.01297447627385459", "--seed", "42002", "--attack_type", "sign_flip", "--blockchain_on", "0", "--defense_on", "1", "--aggregation_method", "hard_filter"]
+    },
+    {
+      "id": "inc-protocol-h1-43000",
+      "tag": "inc_protocol_h1",
+      "args": ["-max_ncomm", "10", "-nm", "0", "-nv", "0", "-vh", "999", "--seed", "43000", "--blockchain_on", "1", "--defense_on", "1", "--protocol_attack", "validator_tamper", "--protocol_attack_start_round", "2", "--protocol_attack_every", "1"]
+    },
+    {
+      "id": "inc-protocol-h1-43001",
+      "tag": "inc_protocol_h1",
+      "args": ["-max_ncomm", "10", "-nm", "0", "-nv", "0", "-vh", "999", "--seed", "43001", "--blockchain_on", "1", "--defense_on", "1", "--protocol_attack", "validator_tamper", "--protocol_attack_start_round", "2", "--protocol_attack_every", "1"]
+    },
+    {
+      "id": "inc-protocol-h1-43002",
+      "tag": "inc_protocol_h1",
+      "args": ["-max_ncomm", "10", "-nm", "0", "-nv", "0", "-vh", "999", "--seed", "43002", "--blockchain_on", "1", "--defense_on", "1", "--protocol_attack", "validator_tamper", "--protocol_attack_start_round", "2", "--protocol_attack_every", "1"]
+    },
+    {
+      "id": "inc-protocol-h2-44000",
+      "tag": "inc_protocol_h2",
+      "args": ["-max_ncomm", "10", "-nm", "0", "-nv", "0", "-vh", "999", "--seed", "44000", "--blockchain_on", "1", "--defense_on", "1", "--protocol_attack", "block_tamper", "--protocol_attack_start_round", "2", "--protocol_attack_every", "1"]
+    },
+    {
+      "id": "inc-protocol-h2-44001",
+      "tag": "inc_protocol_h2",
+      "args": ["-max_ncomm", "10", "-nm", "0", "-nv", "0", "-vh", "999", "--seed", "44001", "--blockchain_on", "1", "--defense_on", "1", "--protocol_attack", "block_tamper", "--protocol_attack_start_round", "2", "--protocol_attack_every", "1"]
+    },
+    {
+      "id": "inc-protocol-h2-44002",
+      "tag": "inc_protocol_h2",
+      "args": ["-max_ncomm", "10", "-nm", "0", "-nv", "0", "-vh", "999", "--seed", "44002", "--blockchain_on", "1", "--defense_on", "1", "--protocol_attack", "block_tamper", "--protocol_attack_start_round", "2", "--protocol_attack_every", "1"]
+    }
+  ]
+}

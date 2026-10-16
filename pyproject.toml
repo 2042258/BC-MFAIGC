@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bc-mfaigc"
+version = "0.1.0"
+description = "Federated DDPM training and blockchain-based update management"
+requires-python = ">=3.12"
+dynamic = ["dependencies"]
+
+[project.scripts]
+bcmfaigc-fid = "bcmfaigc.evaluation.fid:main"
+bcmfaigc-train = "bcmfaigc.simulation.command:main"
+bcmfaigc-analyze = "analysis.command:main"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["environment/requirements-captured.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["bcmfaigc*", "analysis*"]
+exclude = ["analysis.legacy_plots*"]

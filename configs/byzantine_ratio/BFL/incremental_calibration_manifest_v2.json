@@ -1,0 +1,36 @@
+{
+  "stage": "incremental_calibration_v2",
+  "description": "Same-protocol clean calibration for the revised fixed-role/signature-enabled incremental matrix.",
+  "rounds": 100,
+  "common": [
+    "-nd", "10",
+    "-ha", "5,2,3",
+    "-aio", "1",
+    "-pow", "0",
+    "-ko", "6",
+    "-cs", "1",
+    "-B", "128",
+    "-mn", "ddpm",
+    "-iid", "0",
+    "-lr", "0.001",
+    "-dtx", "1",
+    "-le", "1",
+    "-v", "0",
+    "--validation_seed", "9001",
+    "--test_batchsize", "256",
+    "--save_global_checkpoints", "0",
+    "--checkpoint_frequency", "20"
+  ],
+  "runs": [
+    {"id": "inc-calib-47000", "tag": "inc_calib", "args": ["-max_ncomm", "100", "-nm", "0", "-nv", "0", "-vh", "999", "--seed", "47000", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "hard_filter"]},
+    {"id": "inc-calib-47001", "tag": "inc_calib", "args": ["-max_ncomm", "100", "-nm", "0", "-nv", "0", "-vh", "999", "--seed", "47001", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "hard_filter"]},
+    {"id": "inc-calib-47002", "tag": "inc_calib", "args": ["-max_ncomm", "100", "-nm", "0", "-nv", "0", "-vh", "999", "--seed", "47002", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "hard_filter"]},
+    {"id": "inc-calib-47003", "tag": "inc_calib", "args": ["-max_ncomm", "100", "-nm", "0", "-nv", "0", "-vh", "999", "--seed", "47003", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "hard_filter"]},
+    {"id": "inc-calib-47004", "tag": "inc_calib", "args": ["-max_ncomm", "100", "-nm", "0", "-nv", "0", "-vh", "999", "--seed", "47004", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "hard_filter"]},
+    {"id": "inc-calib-47005", "tag": "inc_calib", "args": ["-max_ncomm", "100", "-nm", "0", "-nv", "0", "-vh", "999", "--seed", "47005", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "hard_filter"]},
+    {"id": "inc-calib-47006", "tag": "inc_calib", "args": ["-max_ncomm", "100", "-nm", "0", "-nv", "0", "-vh", "999", "--seed", "47006", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "hard_filter"]},
+    {"id": "inc-calib-47007", "tag": "inc_calib", "args": ["-max_ncomm", "100", "-nm", "0", "-nv", "0", "-vh", "999", "--seed", "47007", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "hard_filter"]},
+    {"id": "inc-calib-47008", "tag": "inc_calib", "args": ["-max_ncomm", "100", "-nm", "0", "-nv", "0", "-vh", "999", "--seed", "47008", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "hard_filter"]},
+    {"id": "inc-calib-47009", "tag": "inc_calib", "args": ["-max_ncomm", "100", "-nm", "0", "-nv", "0", "-vh", "999", "--seed", "47009", "--blockchain_on", "1", "--defense_on", "1", "--aggregation_method", "hard_filter"]}
+  ]
+}

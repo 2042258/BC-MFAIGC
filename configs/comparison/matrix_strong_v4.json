@@ -1,0 +1,400 @@
+{
+  "common": [
+    "-nd",
+    "10",
+    "-ha",
+    "*,*,*",
+    "-aio",
+    "1",
+    "-pow",
+    "0",
+    "-ko",
+    "6",
+    "-cs",
+    "0",
+    "-B",
+    "128",
+    "-mn",
+    "ddpm",
+    "-iid",
+    "0",
+    "-lr",
+    "0.001",
+    "-dtx",
+    "1",
+    "-le",
+    "1",
+    "-v",
+    "0",
+    "--validation_seed",
+    "9001",
+    "--test_batchsize",
+    "256",
+    "--save_global_checkpoints",
+    "1",
+    "--checkpoint_frequency",
+    "20"
+  ],
+  "runs": [
+    {
+      "id": "strong-nm3-bc1_def1-32000",
+      "tag": "strong_nm3_bc1_def1",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "3",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "32000",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "strong-nm3-bc1_def1-32001",
+      "tag": "strong_nm3_bc1_def1",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "3",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "32001",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "strong-nm3-bc1_def1-32002",
+      "tag": "strong_nm3_bc1_def1",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "3",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "32002",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "strong-nm3-bc0_def1-32100",
+      "tag": "strong_nm3_bc0_def1",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "3",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "32100",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "strong-nm3-bc0_def1-32101",
+      "tag": "strong_nm3_bc0_def1",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "3",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "32101",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "strong-nm3-bc0_def1-32102",
+      "tag": "strong_nm3_bc0_def1",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "3",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "32102",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "strong-nm3-bc0_def0-32200",
+      "tag": "strong_nm3_bc0_def0",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "3",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "32200",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "0"
+      ]
+    },
+    {
+      "id": "strong-nm3-bc0_def0-32201",
+      "tag": "strong_nm3_bc0_def0",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "3",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "32201",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "0"
+      ]
+    },
+    {
+      "id": "strong-nm3-bc0_def0-32202",
+      "tag": "strong_nm3_bc0_def0",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "3",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "32202",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "0"
+      ]
+    },
+    {
+      "id": "strong-nm6-bc1_def1-32300",
+      "tag": "strong_nm6_bc1_def1",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "6",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "32300",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "strong-nm6-bc1_def1-32301",
+      "tag": "strong_nm6_bc1_def1",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "6",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "32301",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "strong-nm6-bc1_def1-32302",
+      "tag": "strong_nm6_bc1_def1",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "6",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "32302",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "strong-nm6-bc0_def1-32400",
+      "tag": "strong_nm6_bc0_def1",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "6",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "32400",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "strong-nm6-bc0_def1-32401",
+      "tag": "strong_nm6_bc0_def1",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "6",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "32401",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "strong-nm6-bc0_def1-32402",
+      "tag": "strong_nm6_bc0_def1",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "6",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "32402",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "strong-nm6-bc0_def0-32500",
+      "tag": "strong_nm6_bc0_def0",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "6",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "32500",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "0"
+      ]
+    },
+    {
+      "id": "strong-nm6-bc0_def0-32501",
+      "tag": "strong_nm6_bc0_def0",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "6",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "32501",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "0"
+      ]
+    },
+    {
+      "id": "strong-nm6-bc0_def0-32502",
+      "tag": "strong_nm6_bc0_def0",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "6",
+        "-nv",
+        "0.05",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "32502",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "stage": "matrix",
+  "rounds": 100,
+  "threshold": 0.01297447627385459,
+  "noise_scales": [
+    0.005,
+    0.01,
+    0.015,
+    0.02,
+    0.03
+  ],
+  "noise_scale": 0.005,
+  "common": [
+    "-nd",
+    "10",
+    "-ha",
+    "*,*,*",
+    "-aio",
+    "1",
+    "-pow",
+    "0",
+    "-ko",
+    "6",
+    "-cs",
+    "0",
+    "-B",
+    "128",
+    "-mn",
+    "ddpm",
+    "-iid",
+    "0",
+    "-lr",
+    "0.001",
+    "-dtx",
+    "1",
+    "-le",
+    "1",
+    "-v",
+    "0",
+    "--validation_seed",
+    "9001",
+    "--test_batchsize",
+    "256",
+    "--save_global_checkpoints",
+    "1",
+    "--checkpoint_frequency",
+    "20"
+  ],
+  "runs": [
+    {
+      "id": "matrix-nm0-bc1_def1-60000",
+      "tag": "nm0_bc1_def1",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "0",
+        "-nv",
+        "0.005",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "60000",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "matrix-nm0-bc0_def1-60000",
+      "tag": "nm0_bc0_def1",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "0",
+        "-nv",
+        "0.005",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "60000",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "matrix-nm0-bc0_def0-60000",
+      "tag": "nm0_bc0_def0",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "0",
+        "-nv",
+        "0.005",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "60000",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "0"
+      ]
+    },
+    {
+      "id": "matrix-clean-bc1_def1-69000",
+      "tag": "clean_bc1_def1",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "0",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "69000",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "matrix-clean-bc0_def1-69000",
+      "tag": "clean_bc0_def1",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "0",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "69000",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "1"
+      ]
+    },
+    {
+      "id": "matrix-clean-bc0_def0-69000",
+      "tag": "clean_bc0_def0",
+      "args": [
+        "-max_ncomm",
+        "100",
+        "-nm",
+        "0",
+        "-vh",
+        "0.01297447627385459",
+        "--seed",
+        "69000",
+        "--blockchain_on",
+        "0",
+        "--defense_on",
+        "0"
+      ]
+    }
+  ]
+}

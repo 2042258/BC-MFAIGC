@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "scope": "Pre-organization sanitized Stage 2 publication baseline versus existing raw Stage 2 experiment source; read-only source audit, not runtime or subsequent-refactor acceptance.",
+  "ast_encoding": "SHA256 compact sorted-key JSON of AST node types/fields, excluding source locations and absent/empty optional fields; bytes literals encoded as hex.",
+  "records": {
+    "BFL/Block.py": {
+      "publication": {
+        "byte_sha256": "2739f12018e5de1e882605241c2cdcac707821e04fff46e12343113305d5f1c4",
+        "ast_sha256": "faa691a055a2cd23bbf4bc34ccac8510d8eb7e3570ee0eab13bb987a1b5c4769"
+      },
+      "remote_original": {
+        "byte_sha256": "5a8e0b5951cc22c62e25c926af51a35df9781d65c4a4e1d22fa0ec9c562c2694",
+        "ast_sha256": "faa691a055a2cd23bbf4bc34ccac8510d8eb7e3570ee0eab13bb987a1b5c4769"
+      },
+      "same_ast": true
+    },
+    "BFL/DatasetLoad.py": {
+      "publication": {
+        "byte_sha256": "c06b0dfb7b5fbccc97675f1b040304ed3ba4895757e50d21d4a30da767542b9c",
+        "ast_sha256": "384625c85872f9e576c0337458224a5a573654205098504c31c963f7a4be03bf"
+      },
+      "remote_original": {
+        "byte_sha256": "787f53cb4e27881acc148107d54bf5b3632b839bde62e11a11a48c6afb15952a",
+        "ast_sha256": "384625c85872f9e576c0337458224a5a573654205098504c31c963f7a4be03bf"
+      },
+      "same_ast": true
+    },
+    "BFL/Device.py": {
+      "publication": {
+        "byte_sha256": "5f2c13b509a8e92bd1602ec1c8b6f725887fa71f5a77b8bd44e6241808867a0a",
+        "ast_sha256": "28ec4c4ee726e483f2bdbbf1b743e6b8ddb770c2e6fd3c010639f5c902c9ca8d"
+      },
+      "remote_original": {
+        "byte_sha256": "1544fa25b59f6f989c58723731d619d647462b3e5f11448a095ba8a2ed9ed61f",
+        "ast_sha256": "28ec4c4ee726e483f2bdbbf1b743e6b8ddb770c2e6fd3c010639f5c902c9ca8d"
+      },
+      "same_ast": true
+    },
+    "models/Models.py": {
+      "publication": {
+        "byte_sha256": "ee802cb69afc966fdd790537c8f653dd52c640d2dfe4a6d90b61c3b2d33828f1",
+        "ast_sha256": "13e1af551fa832a6fb07f930fc6efd2d8da21e9d217f3ca8809e42450eed0eea"
+      },
+      "remote_original": {
+        "byte_sha256": "ee802cb69afc966fdd790537c8f653dd52c640d2dfe4a6d90b61c3b2d33828f1",
+        "ast_sha256": "13e1af551fa832a6fb07f930fc6efd2d8da21e9d217f3ca8809e42450eed0eea"
+      },
+      "same_ast": true
+    },
+    "BFL/main.py": {
+      "publication": {
+        "byte_sha256": "d0e8bdf54f2049488460d30875cae8312d566a65d14036ff4985e8157f3706b3",
+        "ast_sha256": "a8bbbaf413b2e27f4bd54d4621b8dfce1c3f0c232b6a4a2219a8754ff2766a43"
+      },
+      "remote_original": {
+        "byte_sha256": "ffb2b1f0d6544aefec58e0bfe1b632519711f5166c9a7921e05d323a5ef8a6b2",
+        "ast_sha256": "a8bbbaf413b2e27f4bd54d4621b8dfce1c3f0c232b6a4a2219a8754ff2766a43"
+      },
+      "same_ast": true
+    },
+    "BFL/stable_hash.py": {
+      "publication": {
+        "byte_sha256": "915b01a1274f1792221346078c96738a6e79f487a63546bebf59dcc94e4ec8e9",
+        "ast_sha256": "ab04bd2b23a34b03db92e8ec978276c657516aa4f5f5853e30ae032571e66b5f"
+      },
+      "remote_original": {
+        "byte_sha256": "915b01a1274f1792221346078c96738a6e79f487a63546bebf59dcc94e4ec8e9",
+        "ast_sha256": "ab04bd2b23a34b03db92e8ec978276c657516aa4f5f5853e30ae032571e66b5f"
+      },
+      "same_ast": true
+    },
+    "BFL/trust_aggregation.py": {
+      "publication": {
+        "byte_sha256": "fd0a2a0164de8e3ccc438ab3157745612012a0d4353a19c71471051d9314a758",
+        "ast_sha256": "8b253957cafd0867fea67461faa3960f42fd6515e7831c9b8e1a353d79382258"
+      },
+      "remote_original": {
+        "byte_sha256": "fd0a2a0164de8e3ccc438ab3157745612012a0d4353a19c71471051d9314a758",
+        "ast_sha256": "8b253957cafd0867fea67461faa3960f42fd6515e7831c9b8e1a353d79382258"
+      },
+      "same_ast": true
+    }
+  }
+}

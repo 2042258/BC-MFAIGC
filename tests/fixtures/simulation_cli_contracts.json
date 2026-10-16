@@ -1,0 +1,1976 @@
+{
+  "classic": [
+    {
+      "dest": "help",
+      "options": [
+        "-h",
+        "--help"
+      ],
+      "default": "==SUPPRESS==",
+      "choices": null,
+      "nargs": 0,
+      "required": false,
+      "type": null
+    },
+    {
+      "dest": "gpu",
+      "options": [
+        "-g",
+        "--gpu"
+      ],
+      "default": "0",
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "str"
+    },
+    {
+      "dest": "verbose",
+      "options": [
+        "-v",
+        "--verbose"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "save_network_snapshots",
+      "options": [
+        "-sn",
+        "--save_network_snapshots"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "destroy_tx_in_block",
+      "options": [
+        "-dtx",
+        "--destroy_tx_in_block"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "resume_path",
+      "options": [
+        "-rp",
+        "--resume_path"
+      ],
+      "default": null,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "str"
+    },
+    {
+      "dest": "save_freq",
+      "options": [
+        "-sf",
+        "--save_freq"
+      ],
+      "default": 5,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "save_most_recent",
+      "options": [
+        "-sm",
+        "--save_most_recent"
+      ],
+      "default": 2,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "save_global_checkpoints",
+      "options": [
+        "--save_global_checkpoints"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "checkpoint_frequency",
+      "options": [
+        "--checkpoint_frequency"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "batchsize",
+      "options": [
+        "-B",
+        "--batchsize"
+      ],
+      "default": 16,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "model_name",
+      "options": [
+        "-mn",
+        "--model_name"
+      ],
+      "default": "ddpm",
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "str"
+    },
+    {
+      "dest": "learning_rate",
+      "options": [
+        "-lr",
+        "--learning_rate"
+      ],
+      "default": 0.001,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "seed",
+      "options": [
+        "--seed"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "run_tag",
+      "options": [
+        "--run_tag"
+      ],
+      "default": null,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "str"
+    },
+    {
+      "dest": "validation_seed",
+      "options": [
+        "--validation_seed"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "protocol_attack",
+      "options": [
+        "--protocol_attack"
+      ],
+      "default": "none",
+      "choices": [
+        "none",
+        "validator_tamper",
+        "block_tamper",
+        "replay"
+      ],
+      "nargs": null,
+      "required": false,
+      "type": null
+    },
+    {
+      "dest": "protocol_attack_start_round",
+      "options": [
+        "--protocol_attack_start_round"
+      ],
+      "default": 2,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "protocol_attack_every",
+      "options": [
+        "--protocol_attack_every"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "optimizer",
+      "options": [
+        "-op",
+        "--optimizer"
+      ],
+      "default": "Adam",
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "str"
+    },
+    {
+      "dest": "IID",
+      "options": [
+        "-iid",
+        "--IID"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "max_num_comm",
+      "options": [
+        "-max_ncomm",
+        "--max_num_comm"
+      ],
+      "default": 100,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "num_devices",
+      "options": [
+        "-nd",
+        "--num_devices"
+      ],
+      "default": 10,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "shard_test_data",
+      "options": [
+        "-st",
+        "--shard_test_data"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "test_batchsize",
+      "options": [
+        "--test_batchsize"
+      ],
+      "default": 256,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "num_malicious",
+      "options": [
+        "-nm",
+        "--num_malicious"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "noise_variance",
+      "options": [
+        "-nv",
+        "--noise_variance"
+      ],
+      "default": 2.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "default_local_epochs",
+      "options": [
+        "-le",
+        "--default_local_epochs"
+      ],
+      "default": 5,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "unit_reward",
+      "options": [
+        "-ur",
+        "--unit_reward"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "knock_out_rounds",
+      "options": [
+        "-ko",
+        "--knock_out_rounds"
+      ],
+      "default": 6,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "lazy_worker_knock_out_rounds",
+      "options": [
+        "-lo",
+        "--lazy_worker_knock_out_rounds"
+      ],
+      "default": 10,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "pow_difficulty",
+      "options": [
+        "-pow",
+        "--pow_difficulty"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "blockchain_on",
+      "options": [
+        "--blockchain_on"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "defense_on",
+      "options": [
+        "--defense_on"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "aggregation_method",
+      "options": [
+        "--aggregation_method"
+      ],
+      "default": "hard_filter",
+      "choices": [
+        "hard_filter",
+        "trust_weighted"
+      ],
+      "nargs": null,
+      "required": false,
+      "type": null
+    },
+    {
+      "dest": "trust_center",
+      "options": [
+        "--trust_center"
+      ],
+      "default": 0.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "trust_scale",
+      "options": [
+        "--trust_scale"
+      ],
+      "default": 1.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "trust_soft_threshold",
+      "options": [
+        "--trust_soft_threshold"
+      ],
+      "default": 0.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "trust_beta",
+      "options": [
+        "--trust_beta"
+      ],
+      "default": 1.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "trust_min_weight",
+      "options": [
+        "--trust_min_weight"
+      ],
+      "default": 0.05,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "trust_hard_reject_score",
+      "options": [
+        "--trust_hard_reject_score"
+      ],
+      "default": 5.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "miner_acception_wait_time",
+      "options": [
+        "-mt",
+        "--miner_acception_wait_time"
+      ],
+      "default": 0.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "miner_accepted_transactions_size_limit",
+      "options": [
+        "-ml",
+        "--miner_accepted_transactions_size_limit"
+      ],
+      "default": 0.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "miner_pos_propagated_block_wait_time",
+      "options": [
+        "-mp",
+        "--miner_pos_propagated_block_wait_time"
+      ],
+      "default": Infinity,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "validator_threshold",
+      "options": [
+        "-vh",
+        "--validator_threshold"
+      ],
+      "default": 0.1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "malicious_updates_discount",
+      "options": [
+        "-md",
+        "--malicious_updates_discount"
+      ],
+      "default": 0.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "malicious_validator_on",
+      "options": [
+        "-mv",
+        "--malicious_validator_on"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "network_stability",
+      "options": [
+        "-ns",
+        "--network_stability"
+      ],
+      "default": 1.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "even_link_speed_strength",
+      "options": [
+        "-els",
+        "--even_link_speed_strength"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "base_data_transmission_speed",
+      "options": [
+        "-dts",
+        "--base_data_transmission_speed"
+      ],
+      "default": 70000.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "even_computation_power",
+      "options": [
+        "-ecp",
+        "--even_computation_power"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "hard_assign",
+      "options": [
+        "-ha",
+        "--hard_assign"
+      ],
+      "default": "*,*,*",
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "str"
+    },
+    {
+      "dest": "all_in_one",
+      "options": [
+        "-aio",
+        "--all_in_one"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "check_signature",
+      "options": [
+        "-cs",
+        "--check_signature"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    }
+  ],
+  "extended": [
+    {
+      "dest": "help",
+      "options": [
+        "-h",
+        "--help"
+      ],
+      "default": "==SUPPRESS==",
+      "choices": null,
+      "nargs": 0,
+      "required": false,
+      "type": null
+    },
+    {
+      "dest": "gpu",
+      "options": [
+        "-g",
+        "--gpu"
+      ],
+      "default": "0",
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "str"
+    },
+    {
+      "dest": "verbose",
+      "options": [
+        "-v",
+        "--verbose"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "save_network_snapshots",
+      "options": [
+        "-sn",
+        "--save_network_snapshots"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "destroy_tx_in_block",
+      "options": [
+        "-dtx",
+        "--destroy_tx_in_block"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "resume_path",
+      "options": [
+        "-rp",
+        "--resume_path"
+      ],
+      "default": null,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "str"
+    },
+    {
+      "dest": "save_freq",
+      "options": [
+        "-sf",
+        "--save_freq"
+      ],
+      "default": 5,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "save_most_recent",
+      "options": [
+        "-sm",
+        "--save_most_recent"
+      ],
+      "default": 2,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "save_global_checkpoints",
+      "options": [
+        "--save_global_checkpoints"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "checkpoint_frequency",
+      "options": [
+        "--checkpoint_frequency"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "batchsize",
+      "options": [
+        "-B",
+        "--batchsize"
+      ],
+      "default": 16,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "model_name",
+      "options": [
+        "-mn",
+        "--model_name"
+      ],
+      "default": "ddpm",
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "str"
+    },
+    {
+      "dest": "learning_rate",
+      "options": [
+        "-lr",
+        "--learning_rate"
+      ],
+      "default": 0.001,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "seed",
+      "options": [
+        "--seed"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "run_tag",
+      "options": [
+        "--run_tag"
+      ],
+      "default": null,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "str"
+    },
+    {
+      "dest": "validation_seed",
+      "options": [
+        "--validation_seed"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "protocol_attack",
+      "options": [
+        "--protocol_attack"
+      ],
+      "default": "none",
+      "choices": [
+        "none",
+        "validator_tamper",
+        "block_tamper",
+        "replay"
+      ],
+      "nargs": null,
+      "required": false,
+      "type": null
+    },
+    {
+      "dest": "protocol_attack_start_round",
+      "options": [
+        "--protocol_attack_start_round"
+      ],
+      "default": 2,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "protocol_attack_every",
+      "options": [
+        "--protocol_attack_every"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "attack_type",
+      "options": [
+        "--attack_type"
+      ],
+      "default": "gaussian_weight_noise",
+      "choices": [
+        "gaussian_weight_noise",
+        "sign_flip"
+      ],
+      "nargs": null,
+      "required": false,
+      "type": null
+    },
+    {
+      "dest": "optimizer",
+      "options": [
+        "-op",
+        "--optimizer"
+      ],
+      "default": "Adam",
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "str"
+    },
+    {
+      "dest": "IID",
+      "options": [
+        "-iid",
+        "--IID"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "max_num_comm",
+      "options": [
+        "-max_ncomm",
+        "--max_num_comm"
+      ],
+      "default": 100,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "num_devices",
+      "options": [
+        "-nd",
+        "--num_devices"
+      ],
+      "default": 10,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "shard_test_data",
+      "options": [
+        "-st",
+        "--shard_test_data"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "test_batchsize",
+      "options": [
+        "--test_batchsize"
+      ],
+      "default": 256,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "num_malicious",
+      "options": [
+        "-nm",
+        "--num_malicious"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "noise_variance",
+      "options": [
+        "-nv",
+        "--noise_variance"
+      ],
+      "default": 2.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "default_local_epochs",
+      "options": [
+        "-le",
+        "--default_local_epochs"
+      ],
+      "default": 5,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "unit_reward",
+      "options": [
+        "-ur",
+        "--unit_reward"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "knock_out_rounds",
+      "options": [
+        "-ko",
+        "--knock_out_rounds"
+      ],
+      "default": 6,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "lazy_worker_knock_out_rounds",
+      "options": [
+        "-lo",
+        "--lazy_worker_knock_out_rounds"
+      ],
+      "default": 10,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "pow_difficulty",
+      "options": [
+        "-pow",
+        "--pow_difficulty"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "blockchain_on",
+      "options": [
+        "--blockchain_on"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "defense_on",
+      "options": [
+        "--defense_on"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "aggregation_method",
+      "options": [
+        "--aggregation_method"
+      ],
+      "default": "hard_filter",
+      "choices": [
+        "hard_filter",
+        "trust_weighted",
+        "multikrum"
+      ],
+      "nargs": null,
+      "required": false,
+      "type": null
+    },
+    {
+      "dest": "multikrum_f",
+      "options": [
+        "--multikrum_f"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "trust_center",
+      "options": [
+        "--trust_center"
+      ],
+      "default": 0.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "trust_scale",
+      "options": [
+        "--trust_scale"
+      ],
+      "default": 1.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "trust_soft_threshold",
+      "options": [
+        "--trust_soft_threshold"
+      ],
+      "default": 0.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "trust_beta",
+      "options": [
+        "--trust_beta"
+      ],
+      "default": 1.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "trust_min_weight",
+      "options": [
+        "--trust_min_weight"
+      ],
+      "default": 0.05,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "trust_hard_reject_score",
+      "options": [
+        "--trust_hard_reject_score"
+      ],
+      "default": 5.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "miner_acception_wait_time",
+      "options": [
+        "-mt",
+        "--miner_acception_wait_time"
+      ],
+      "default": 0.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "miner_accepted_transactions_size_limit",
+      "options": [
+        "-ml",
+        "--miner_accepted_transactions_size_limit"
+      ],
+      "default": 0.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "miner_pos_propagated_block_wait_time",
+      "options": [
+        "-mp",
+        "--miner_pos_propagated_block_wait_time"
+      ],
+      "default": Infinity,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "validator_threshold",
+      "options": [
+        "-vh",
+        "--validator_threshold"
+      ],
+      "default": 0.1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "malicious_updates_discount",
+      "options": [
+        "-md",
+        "--malicious_updates_discount"
+      ],
+      "default": 0.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "malicious_validator_on",
+      "options": [
+        "-mv",
+        "--malicious_validator_on"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "network_stability",
+      "options": [
+        "-ns",
+        "--network_stability"
+      ],
+      "default": 1.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "even_link_speed_strength",
+      "options": [
+        "-els",
+        "--even_link_speed_strength"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "base_data_transmission_speed",
+      "options": [
+        "-dts",
+        "--base_data_transmission_speed"
+      ],
+      "default": 70000.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "even_computation_power",
+      "options": [
+        "-ecp",
+        "--even_computation_power"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "hard_assign",
+      "options": [
+        "-ha",
+        "--hard_assign"
+      ],
+      "default": "*,*,*",
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "str"
+    },
+    {
+      "dest": "all_in_one",
+      "options": [
+        "-aio",
+        "--all_in_one"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "check_signature",
+      "options": [
+        "-cs",
+        "--check_signature"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    }
+  ],
+  "krum": [
+    {
+      "dest": "help",
+      "options": [
+        "-h",
+        "--help"
+      ],
+      "default": "==SUPPRESS==",
+      "choices": null,
+      "nargs": 0,
+      "required": false,
+      "type": null
+    },
+    {
+      "dest": "gpu",
+      "options": [
+        "-g",
+        "--gpu"
+      ],
+      "default": "0",
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "str"
+    },
+    {
+      "dest": "verbose",
+      "options": [
+        "-v",
+        "--verbose"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "save_network_snapshots",
+      "options": [
+        "-sn",
+        "--save_network_snapshots"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "destroy_tx_in_block",
+      "options": [
+        "-dtx",
+        "--destroy_tx_in_block"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "resume_path",
+      "options": [
+        "-rp",
+        "--resume_path"
+      ],
+      "default": null,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "str"
+    },
+    {
+      "dest": "save_freq",
+      "options": [
+        "-sf",
+        "--save_freq"
+      ],
+      "default": 5,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "save_most_recent",
+      "options": [
+        "-sm",
+        "--save_most_recent"
+      ],
+      "default": 2,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "save_global_checkpoints",
+      "options": [
+        "--save_global_checkpoints"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "checkpoint_frequency",
+      "options": [
+        "--checkpoint_frequency"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "batchsize",
+      "options": [
+        "-B",
+        "--batchsize"
+      ],
+      "default": 16,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "model_name",
+      "options": [
+        "-mn",
+        "--model_name"
+      ],
+      "default": "ddpm",
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "str"
+    },
+    {
+      "dest": "learning_rate",
+      "options": [
+        "-lr",
+        "--learning_rate"
+      ],
+      "default": 0.001,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "seed",
+      "options": [
+        "--seed"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "run_tag",
+      "options": [
+        "--run_tag"
+      ],
+      "default": null,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "str"
+    },
+    {
+      "dest": "validation_seed",
+      "options": [
+        "--validation_seed"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "protocol_attack",
+      "options": [
+        "--protocol_attack"
+      ],
+      "default": "none",
+      "choices": [
+        "none",
+        "validator_tamper",
+        "block_tamper",
+        "replay"
+      ],
+      "nargs": null,
+      "required": false,
+      "type": null
+    },
+    {
+      "dest": "protocol_attack_start_round",
+      "options": [
+        "--protocol_attack_start_round"
+      ],
+      "default": 2,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "protocol_attack_every",
+      "options": [
+        "--protocol_attack_every"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "attack_type",
+      "options": [
+        "--attack_type"
+      ],
+      "default": "gaussian_weight_noise",
+      "choices": [
+        "gaussian_weight_noise",
+        "sign_flip"
+      ],
+      "nargs": null,
+      "required": false,
+      "type": null
+    },
+    {
+      "dest": "optimizer",
+      "options": [
+        "-op",
+        "--optimizer"
+      ],
+      "default": "Adam",
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "str"
+    },
+    {
+      "dest": "IID",
+      "options": [
+        "-iid",
+        "--IID"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "max_num_comm",
+      "options": [
+        "-max_ncomm",
+        "--max_num_comm"
+      ],
+      "default": 100,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "num_devices",
+      "options": [
+        "-nd",
+        "--num_devices"
+      ],
+      "default": 10,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "shard_test_data",
+      "options": [
+        "-st",
+        "--shard_test_data"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "test_batchsize",
+      "options": [
+        "--test_batchsize"
+      ],
+      "default": 256,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "num_malicious",
+      "options": [
+        "-nm",
+        "--num_malicious"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "noise_variance",
+      "options": [
+        "-nv",
+        "--noise_variance"
+      ],
+      "default": 2.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "default_local_epochs",
+      "options": [
+        "-le",
+        "--default_local_epochs"
+      ],
+      "default": 5,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "unit_reward",
+      "options": [
+        "-ur",
+        "--unit_reward"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "knock_out_rounds",
+      "options": [
+        "-ko",
+        "--knock_out_rounds"
+      ],
+      "default": 6,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "lazy_worker_knock_out_rounds",
+      "options": [
+        "-lo",
+        "--lazy_worker_knock_out_rounds"
+      ],
+      "default": 10,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "pow_difficulty",
+      "options": [
+        "-pow",
+        "--pow_difficulty"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "blockchain_on",
+      "options": [
+        "--blockchain_on"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "defense_on",
+      "options": [
+        "--defense_on"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "aggregation_method",
+      "options": [
+        "--aggregation_method"
+      ],
+      "default": "hard_filter",
+      "choices": [
+        "hard_filter",
+        "trust_weighted",
+        "multikrum",
+        "krum"
+      ],
+      "nargs": null,
+      "required": false,
+      "type": null
+    },
+    {
+      "dest": "multikrum_f",
+      "options": [
+        "--multikrum_f",
+        "--krum_f"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "trust_center",
+      "options": [
+        "--trust_center"
+      ],
+      "default": 0.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "trust_scale",
+      "options": [
+        "--trust_scale"
+      ],
+      "default": 1.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "trust_soft_threshold",
+      "options": [
+        "--trust_soft_threshold"
+      ],
+      "default": 0.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "trust_beta",
+      "options": [
+        "--trust_beta"
+      ],
+      "default": 1.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "trust_min_weight",
+      "options": [
+        "--trust_min_weight"
+      ],
+      "default": 0.05,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "trust_hard_reject_score",
+      "options": [
+        "--trust_hard_reject_score"
+      ],
+      "default": 5.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "miner_acception_wait_time",
+      "options": [
+        "-mt",
+        "--miner_acception_wait_time"
+      ],
+      "default": 0.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "miner_accepted_transactions_size_limit",
+      "options": [
+        "-ml",
+        "--miner_accepted_transactions_size_limit"
+      ],
+      "default": 0.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "miner_pos_propagated_block_wait_time",
+      "options": [
+        "-mp",
+        "--miner_pos_propagated_block_wait_time"
+      ],
+      "default": Infinity,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "validator_threshold",
+      "options": [
+        "-vh",
+        "--validator_threshold"
+      ],
+      "default": 0.1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "malicious_updates_discount",
+      "options": [
+        "-md",
+        "--malicious_updates_discount"
+      ],
+      "default": 0.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "malicious_validator_on",
+      "options": [
+        "-mv",
+        "--malicious_validator_on"
+      ],
+      "default": 0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "network_stability",
+      "options": [
+        "-ns",
+        "--network_stability"
+      ],
+      "default": 1.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "even_link_speed_strength",
+      "options": [
+        "-els",
+        "--even_link_speed_strength"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "base_data_transmission_speed",
+      "options": [
+        "-dts",
+        "--base_data_transmission_speed"
+      ],
+      "default": 70000.0,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "float"
+    },
+    {
+      "dest": "even_computation_power",
+      "options": [
+        "-ecp",
+        "--even_computation_power"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "hard_assign",
+      "options": [
+        "-ha",
+        "--hard_assign"
+      ],
+      "default": "*,*,*",
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "str"
+    },
+    {
+      "dest": "all_in_one",
+      "options": [
+        "-aio",
+        "--all_in_one"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    },
+    {
+      "dest": "check_signature",
+      "options": [
+        "-cs",
+        "--check_signature"
+      ],
+      "default": 1,
+      "choices": null,
+      "nargs": null,
+      "required": false,
+      "type": "int"
+    }
+  ]
+}

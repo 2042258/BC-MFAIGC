@@ -1,0 +1,141 @@
+import sys
+sys.path.append("..")
+import os
+import argparse
+import numpy as np
+import torch
+import torch.nn.functional as F
+import time
+from models.Models import  DDPM
+from clients import ClientsGroup
+from datetime import datetime
+
+"""
+python server.py -nc 20 -mn mnist_cnn -iid 0 -ncomm 25 -nm 3
+python server.py -nc 20 -mn mnist_bcnn -iid 0 -ncomm 25 -nm 3 
+"""
+for i in range(3):
+	print(f"循环次数: {i+1}")
+
+	parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter, description="FedAvg")
+	parser.add_argument('-g', '--gpu', type=str, default='0', help='gpu id to use(e.g. 0,1,2,3)')
+	parser.add_argument('-nc', '--num_of_clients', type=int, default=10, help='numer of the clients')
+	# cfraction：C fraction，C的分数，0表示1个客户端，1表示总客户端
+	parser.add_argument('-cf', '--cfraction', type=float, default=1, help='C fraction, 0 means 1 client, 1 means total clients')
+	parser.add_argument('-E', '--epoch', type=int, default=5, help='local train epoch')
+	parser.add_argument('-B', '--batchsize', type=int, default=16, help='local train batch size')
+	parser.add_argument('-mn', '--model_name', type=str, default='ddpm', help='the model to train')
+	parser.add_argument('-lr', "--learning_rate", type=float, default=0.001, help="learning rate, \
+						use value from origin paper as default")
+	# ncomm，number of communications，通信次数
+	parser.add_argument('-ncomm', '--num_comm', type=int, default=100, help='number of communications')
+	# IDD，独立同分布：在一组随机变量中，每个随机变量互相独立，且每个变量的概率分布都相同
+	parser.add_argument('-iid', '--IID', type=int, default=0, help='the way to allocate data to clients')
+
+	# Hang added
+	# 网络中恶意节点的数量。恶意节点的数据集将引入高斯噪声
+	parser.add_argument('-nm', '--num_malicious', type=int, default=2, help="number of malicious nodes in the network. malicious node's data sets will be introduced Gaussian noise")
+	# 当测试数据集未分片时，很容易看到全局模型在客户端之间是一致的
+	parser.add_argument('-st', '--shard_test_data', type=int, default=0, help='it is easy to see the global models are consistent across clients when the test dataset is NOT sharded')
+	# 噪声方差级别的注入高斯噪声
+	parser.add_argument('-nv', '--noise_variance', type=int, default=2, help="noise variance level of the injected Gaussian Noise")
+	# end
+
+
+
+	if __name__=="__main__":
+
+		# save arguments used
+		args = parser.parse_args()
+		args = args.__dict__
+
+		date_time = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+		# 1. parse arguments and save to file
+		# create folder of logs
+		if not os.path.exists('../logs'):
+			os.makedirs('../logs')
+		if not os.path.exists('../logs/flogs'):
+			os.makedirs('../logs/flogs')
+
+		log_files_folder_path = f"../logs/flogs/{date_time}_{args['model_name']}"
+		os.mkdir(log_files_folder_path)
+
+		with open(f'{log_files_folder_path}/args_used.txt', 'w') as f:
+			f.write("Command line arguments used -\n")
+			f.write(' '.join(sys.argv[1:]))
+			f.write("\n\nAll arguments used -\n")
+			for arg_name, arg in args.items():
+				f.write(f'\n--{arg_name} {arg}')
+
+		# 记录开始时间
+		with open(f'{log_files_folder_path}/time.txt', 'w') as f:
+			f.write("start time: " + date_time)
+
+		# os.environ['CUDA_VISIBLE_clientS'] = args['gpu']
+		dev = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+
+		net = None
+		if args['model_name'] == 'ddpm':
+			net = DDPM()
+		else:
+			print("model name not found")
+			exit()
+		if torch.cuda.device_count() > 1:
+			print("Let's use", torch.cuda.device_count(), "GPUs!")
+			net = torch.nn.DataParallel(net)
+		net = net.to(dev)
+
+		loss_func = F.cross_entropy
+		# opti = optim.SGD(net.parameters(), lr=args['learning_rate'])
+
+		myClients = ClientsGroup('cifar10', args['IID'], args['num_of_clients'], args['learning_rate'], dev, net, args['num_malicious'], args['noise_variance'], shard_test_data=args['shard_test_data'])
+		# testDataLoader = myClients.test_data_loader
+
+		num_in_comm = int(max(args['num_of_clients'] * args['cfraction'], 1))
+		global_parameters = net.state_dict()
+		for i in range(args['num_comm']):
+			comm_round_start_time = time.time()
+			print("communicate round {}".format(i+1))
+
+			comm_round_folder = f"{log_files_folder_path}/comm_{i+1}"
+			os.mkdir(comm_round_folder)
+
+			order = np.random.permutation(args['num_of_clients'])
+			clients_in_comm = ['client_{}'.format(i+1) for i in order[0:num_in_comm]]
+
+			sum_parameters = None
+			for client in clients_in_comm:
+				myClients.clients_set[client].reset_variance_of_noise()
+				# 客户端模型本地更新
+				local_parameters = myClients.clients_set[client].localUpdate(args['epoch'], args['batchsize'], loss_func, global_parameters, comm_round_folder, i)
+				if sum_parameters is None:
+					sum_parameters = local_parameters
+				else:
+					for var in sum_parameters:
+						sum_parameters[var] = sum_parameters[var] + local_parameters[var]
+
+			# 计算全局模型，即所有客户端模型的平均值
+			for var in global_parameters:
+				global_parameters[var] = (sum_parameters[var] / num_in_comm)
+
+			clients_list = list(myClients.clients_set.values())
+			print(''' Logging Accuracies by clients ''')
+			# open(f"{log_files_folder_path}/comm_{i+1}.txt", 'w').close()
+			# 用每轮得出的全局权重去评估各个客户端测试集的准确率
+			for client in clients_list:
+				accuracy_this_round = client.evaluate_model_weights(global_parameters)
+				with open(f"{comm_round_folder}/global_comm_{i+1}.txt", "a") as file:
+					is_malicious_node = "M" if client.is_malicious else "B"
+					file.write(f"{client.idx} {is_malicious_node}: {accuracy_this_round}\n")
+			# logging time
+			# 记录每轮花的时间
+			comm_round_spent_time = time.time() - comm_round_start_time
+			with open(f"{comm_round_folder}/global_comm_{i+1}.txt", "a") as file:
+				file.write(f"comm_round_block_gen_time: {comm_round_spent_time}\n")
+
+		# 结束时间
+		end_time = datetime.now().strftime("%Y%m%d_%H%M%S")
+		with open(f'{log_files_folder_path}/time.txt', 'a') as f:
+			f.write("\nend time: " + end_time)
+

@@ -1,0 +1,302 @@
+{
+  "manifest_version": "protocol-supplement-retry-20260927",
+  "status": "retry_after_log_directory_fix",
+  "purpose": "Blockchain signature integrity, block tamper resistance and replay resistance supplement",
+  "backend": "remote_rtx4080_super",
+  "rounds": 100,
+  "seeds_per_configuration": 3,
+  "expected_runs": 12,
+  "frozen_parameters": {
+    "threshold": 0.08772326443990075,
+    "noise_scale": 0.02,
+    "trust_center": 0.00016371802330954964,
+    "trust_scale": 0.005933583867778754,
+    "validation_seed": 9001,
+    "check_signature": 1,
+    "destroy_tx_in_block": 0
+  },
+  "common": [
+    "-nd",
+    "10",
+    "-ha",
+    "*,*,*",
+    "-aio",
+    "1",
+    "-pow",
+    "0",
+    "-ko",
+    "6",
+    "-cs",
+    "1",
+    "-B",
+    "128",
+    "-mn",
+    "ddpm",
+    "-iid",
+    "0",
+    "-lr",
+    "0.001",
+    "-dtx",
+    "0",
+    "-le",
+    "1",
+    "-v",
+    "0",
+    "-nv",
+    "0.02",
+    "--validation_seed",
+    "9001",
+    "--test_batchsize",
+    "256",
+    "--save_global_checkpoints",
+    "1",
+    "--checkpoint_frequency",
+    "1",
+    "--aggregation_method",
+    "trust_weighted",
+    "--trust_center",
+    "0.00016371802330954964",
+    "--trust_scale",
+    "0.005933583867778754",
+    "--trust_soft_threshold",
+    "1.0",
+    "--trust_beta",
+    "1.0",
+    "--trust_min_weight",
+    "0.05",
+    "--trust_hard_reject_score",
+    "5.0",
+    "-max_ncomm",
+    "100",
+    "-vh",
+    "0.08772326443990075"
+  ],
+  "groups": {
+    "H0": 12,
+    "H1": 6,
+    "H2": 3,
+    "H3": 6
+  },
+  "runs": [
+    {
+      "id": "protocol-retry-20260927-protocol-v2-h0-clean-bc-101000",
+      "tag": "protocol-v2-h0-clean_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101000,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101000",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "none"
+      ]
+    },
+    {
+      "id": "protocol-retry-20260927-protocol-v2-h0-clean-bc-101001",
+      "tag": "protocol-v2-h0-clean_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101001,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101001",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "none"
+      ]
+    },
+    {
+      "id": "protocol-retry-20260927-protocol-v2-h0-clean-bc-101002",
+      "tag": "protocol-v2-h0-clean_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101002,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101002",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "none"
+      ]
+    },
+    {
+      "id": "protocol-retry-20260927-protocol-v2-h0-attack30-bc-101021",
+      "tag": "protocol-v2-h0-attack30_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101021,
+      "args": [
+        "-nm",
+        "3",
+        "--seed",
+        "101021",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "none"
+      ]
+    },
+    {
+      "id": "protocol-retry-20260927-protocol-v2-h0-attack30-bc-101022",
+      "tag": "protocol-v2-h0-attack30_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101022,
+      "args": [
+        "-nm",
+        "3",
+        "--seed",
+        "101022",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "none"
+      ]
+    },
+    {
+      "id": "protocol-retry-20260927-protocol-v2-h1-validator-tamper-bc-101040",
+      "tag": "protocol-v2-h1-validator-tamper_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101040,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101040",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "validator_tamper"
+      ]
+    },
+    {
+      "id": "protocol-retry-20260927-protocol-v2-h1-validator-tamper-bc-101042",
+      "tag": "protocol-v2-h1-validator-tamper_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101042,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101042",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "validator_tamper"
+      ]
+    },
+    {
+      "id": "protocol-retry-20260927-protocol-v2-h2-block-tamper-bc-101060",
+      "tag": "protocol-v2-h2-block-tamper_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101060,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101060",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "block_tamper"
+      ]
+    },
+    {
+      "id": "protocol-retry-20260927-protocol-v2-h2-block-tamper-bc-101061",
+      "tag": "protocol-v2-h2-block-tamper_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101061,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101061",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "block_tamper"
+      ]
+    },
+    {
+      "id": "protocol-retry-20260927-protocol-v2-h2-block-tamper-bc-101062",
+      "tag": "protocol-v2-h2-block-tamper_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101062,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101062",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "block_tamper"
+      ]
+    },
+    {
+      "id": "protocol-retry-20260927-protocol-v2-h3-replay-bc-101070",
+      "tag": "protocol-v2-h3-replay_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101070,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101070",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "replay"
+      ]
+    },
+    {
+      "id": "protocol-retry-20260927-protocol-v2-h3-replay-bc-101072",
+      "tag": "protocol-v2-h3-replay_bc",
+      "method": "BC-MFAIGC",
+      "seed": 101072,
+      "args": [
+        "-nm",
+        "0",
+        "--seed",
+        "101072",
+        "--blockchain_on",
+        "1",
+        "--defense_on",
+        "1",
+        "--protocol_attack",
+        "replay"
+      ]
+    }
+  ],
+  "excluded_from_paper_statistics": [
+    "WSL smoke runs",
+    "remote smoke run"
+  ]
+}

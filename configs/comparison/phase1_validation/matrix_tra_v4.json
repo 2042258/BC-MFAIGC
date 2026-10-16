@@ -1,0 +1,451 @@
+{
+  "stage": "tra",
+  "rounds": 30,
+  "threshold": 0.2,
+  "noise_scales": [
+    0.005,
+    0.01,
+    0.015,
+    0.02,
+    0.03
+  ],
+  "noise_scale": 0.005,
+  "common": [
+    "-nd",
+    "10",
+    "-ha",
+    "*,*,*",
+    "-aio",
+    "1",
+    "-pow",
+    "0",
+    "-ko",
+    "6",
+    "-cs",
+    "0",
+    "-B",
+    "128",
+    "-mn",
+    "ddpm",
+    "-iid",
+    "0",
+    "-lr",
+    "0.001",
+    "-dtx",
+    "1",
+    "-le",
+    "1",
+    "-v",
+    "0",
+    "--validation_seed",
+    "9001",
+    "--test_batchsize",
+    "256",
+    "--save_global_checkpoints",
+    "1",
+    "--checkpoint_frequency",
+    "20"
+  ],
+  "runs": [
+    {
+      "id": "tra-clean-40000",
+      "tag": "tra_clean",
+      "args": [
+        "--epochs",
+        "34",
+        "--batchsize",
+        "128",
+        "--test-batchsize",
+        "256",
+        "--seed",
+        "40000",
+        "--validation-seed",
+        "9001",
+        "--noise-probability",
+        "0",
+        "--noise-scale",
+        "0.005"
+      ]
+    },
+    {
+      "id": "tra-clean-40001",
+      "tag": "tra_clean",
+      "args": [
+        "--epochs",
+        "34",
+        "--batchsize",
+        "128",
+        "--test-batchsize",
+        "256",
+        "--seed",
+        "40001",
+        "--validation-seed",
+        "9001",
+        "--noise-probability",
+        "0",
+        "--noise-scale",
+        "0.005"
+      ]
+    },
+    {
+      "id": "tra-clean-40002",
+      "tag": "tra_clean",
+      "args": [
+        "--epochs",
+        "34",
+        "--batchsize",
+        "128",
+        "--test-batchsize",
+        "256",
+        "--seed",
+        "40002",
+        "--validation-seed",
+        "9001",
+        "--noise-probability",
+        "0",
+        "--noise-scale",
+        "0.005"
+      ]
+    },
+    {
+      "id": "tra-clean-40003",
+      "tag": "tra_clean",
+      "args": [
+        "--epochs",
+        "34",
+        "--batchsize",
+        "128",
+        "--test-batchsize",
+        "256",
+        "--seed",
+        "40003",
+        "--validation-seed",
+        "9001",
+        "--noise-probability",
+        "0",
+        "--noise-scale",
+        "0.005"
+      ]
+    },
+    {
+      "id": "tra-clean-40004",
+      "tag": "tra_clean",
+      "args": [
+        "--epochs",
+        "34",
+        "--batchsize",
+        "128",
+        "--test-batchsize",
+        "256",
+        "--seed",
+        "40004",
+        "--validation-seed",
+        "9001",
+        "--noise-probability",
+        "0",
+        "--noise-scale",
+        "0.005"
+      ]
+    },
+    {
+      "id": "tra-contam-nm1-41100",
+      "tag": "tra_contam_nm1",
+      "args": [
+        "--epochs",
+        "34",
+        "--batchsize",
+        "128",
+        "--test-batchsize",
+        "256",
+        "--seed",
+        "41100",
+        "--validation-seed",
+        "9001",
+        "--noise-probability",
+        "0.1",
+        "--noise-scale",
+        "0.005"
+      ]
+    },
+    {
+      "id": "tra-contam-nm1-41101",
+      "tag": "tra_contam_nm1",
+      "args": [
+        "--epochs",
+        "34",
+        "--batchsize",
+        "128",
+        "--test-batchsize",
+        "256",
+        "--seed",
+        "41101",
+        "--validation-seed",
+        "9001",
+        "--noise-probability",
+        "0.1",
+        "--noise-scale",
+        "0.005"
+      ]
+    },
+    {
+      "id": "tra-contam-nm1-41102",
+      "tag": "tra_contam_nm1",
+      "args": [
+        "--epochs",
+        "34",
+        "--batchsize",
+        "128",
+        "--test-batchsize",
+        "256",
+        "--seed",
+        "41102",
+        "--validation-seed",
+        "9001",
+        "--noise-probability",
+        "0.1",
+        "--noise-scale",
+        "0.005"
+      ]
+    },
+    {
+      "id": "tra-contam-nm1-41103",
+      "tag": "tra_contam_nm1",
+      "args": [
+        "--epochs",
+        "34",
+        "--batchsize",
+        "128",
+        "--test-batchsize",
+        "256",
+        "--seed",
+        "41103",
+        "--validation-seed",
+        "9001",
+        "--noise-probability",
+        "0.1",
+        "--noise-scale",
+        "0.005"
+      ]
+    },
+    {
+      "id": "tra-contam-nm1-41104",
+      "tag": "tra_contam_nm1",
+      "args": [
+        "--epochs",
+        "34",
+        "--batchsize",
+        "128",
+        "--test-batchsize",
+        "256",
+        "--seed",
+        "41104",
+        "--validation-seed",
+        "9001",
+        "--noise-probability",
+        "0.1",
+        "--noise-scale",
+        "0.005"
+      ]
+    },
+    {
+      "id": "tra-contam-nm3-41300",
+      "tag": "tra_contam_nm3",
+      "args": [
+        "--epochs",
+        "34",
+        "--batchsize",
+        "128",
+        "--test-batchsize",
+        "256",
+        "--seed",
+        "41300",
+        "--validation-seed",
+        "9001",
+        "--noise-probability",
+        "0.3",
+        "--noise-scale",
+        "0.005"
+      ]
+    },
+    {
+      "id": "tra-contam-nm3-41301",
+      "tag": "tra_contam_nm3",
+      "args": [
+        "--epochs",
+        "34",
+        "--batchsize",
+        "128",
+        "--test-batchsize",
+        "256",
+        "--seed",
+        "41301",
+        "--validation-seed",
+        "9001",
+        "--noise-probability",
+        "0.3",
+        "--noise-scale",
+        "0.005"
+      ]
+    },
+    {
+      "id": "tra-contam-nm3-41302",
+      "tag": "tra_contam_nm3",
+      "args": [
+        "--epochs",
+        "34",
+        "--batchsize",
+        "128",
+        "--test-batchsize",
+        "256",
+        "--seed",
+        "41302",
+        "--validation-seed",
+        "9001",
+        "--noise-probability",
+        "0.3",
+        "--noise-scale",
+        "0.005"
+      ]
+    },
+    {
+      "id": "tra-contam-nm3-41303",
+      "tag": "tra_contam_nm3",
+      "args": [
+        "--epochs",
+        "34",
+        "--batchsize",
+        "128",
+        "--test-batchsize",
+        "256",
+        "--seed",
+        "41303",
+        "--validation-seed",
+        "9001",
+        "--noise-probability",
+        "0.3",
+        "--noise-scale",
+        "0.005"
+      ]
+    },
+    {
+      "id": "tra-contam-nm3-41304",
+      "tag": "tra_contam_nm3",
+      "args": [
+        "--epochs",
+        "34",
+        "--batchsize",
+        "128",
+        "--test-batchsize",
+        "256",
+        "--seed",
+        "41304",
+        "--validation-seed",
+        "9001",
+        "--noise-probability",
+        "0.3",
+        "--noise-scale",
+        "0.005"
+      ]
+    },
+    {
+      "id": "tra-contam-nm6-41600",
+      "tag": "tra_contam_nm6",
+      "args": [
+        "--epochs",
+        "34",
+        "--batchsize",
+        "128",
+        "--test-batchsize",
+        "256",
+        "--seed",
+        "41600",
+        "--validation-seed",
+        "9001",
+        "--noise-probability",
+        "0.6",
+        "--noise-scale",
+        "0.005"
+      ]
+    },
+    {
+      "id": "tra-contam-nm6-41601",
+      "tag": "tra_contam_nm6",
+      "args": [
+        "--epochs",
+        "34",
+        "--batchsize",
+        "128",
+        "--test-batchsize",
+        "256",
+        "--seed",
+        "41601",
+        "--validation-seed",
+        "9001",
+        "--noise-probability",
+        "0.6",
+        "--noise-scale",
+        "0.005"
+      ]
+    },
+    {
+      "id": "tra-contam-nm6-41602",
+      "tag": "tra_contam_nm6",
+      "args": [
+        "--epochs",
+        "34",
+        "--batchsize",
+        "128",
+        "--test-batchsize",
+        "256",
+        "--seed",
+        "41602",
+        "--validation-seed",
+        "9001",
+        "--noise-probability",
+        "0.6",
+        "--noise-scale",
+        "0.005"
+      ]
+    },
+    {
+      "id": "tra-contam-nm6-41603",
+      "tag": "tra_contam_nm6",
+      "args": [
+        "--epochs",
+        "34",
+        "--batchsize",
+        "128",
+        "--test-batchsize",
+        "256",
+        "--seed",
+        "41603",
+        "--validation-seed",
+        "9001",
+        "--noise-probability",
+        "0.6",
+        "--noise-scale",
+        "0.005"
+      ]
+    },
+    {
+      "id": "tra-contam-nm6-41604",
+      "tag": "tra_contam_nm6",
+      "args": [
+        "--epochs",
+        "34",
+        "--batchsize",
+        "128",
+        "--test-batchsize",
+        "256",
+        "--seed",
+        "41604",
+        "--validation-seed",
+        "9001",
+        "--noise-probability",
+        "0.6",
+        "--noise-scale",
+        "0.005"
+      ]
+    }
+  ]
+}
